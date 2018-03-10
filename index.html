@@ -1,1 +1,119 @@
-<h1>Caoooo</h1>
+<!DOCTYPE html>
+<html lang="en" ng-app="autocomplete">
+<head>
+    <title>Restaurants Clariness</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body ng-cloak>
+    <div id="navigation">
+        <form ng-class="{'show-filters': navigationFilter}">
+            <div class="form-inline">
+                <h3><b>Pronadjite restoran u blizini</b></h3>
+            </div>
+            <div class="form-inline">
+                <input type="text" value="" placeholder="Ulica">
+            </div>
+            <div class="form-inline">
+                <input type="text" value="" placeholder="Grad">
+            </div>
+            <div class="form-inline">
+                <button type="submit">TRAŽI</button>
+            </div>
+        </form>
+        <div class="account">
+            <ul>
+                <li><a href="javascript:void(0)">Moj nalog <span>&#9662;</span></a></li>
+                <li><a href="javascript:void(0)"><img src="assets/images/settingsico.png" alt=""></a></li>
+                <li><a href="javascript:void(0)" ng-click="navigationFilter = !navigationFilter">{{navigationFilter? 'Sakrij filter &#9652;' : 'Prikaži filter &#9662;'}}</a></li>
+                <li><a href="javascript:void(0)" ng-click="sidebar = !sidebar">&#9776;</a></li>
+            </ul>
+        </div>
+    </div>
+    <div id="content">
+        <div id="sidebar" ng-class="{'show-sidebar': sidebar}">
+            <div class="caption">
+                <strong>RESTORANI<br/> PREMA TIPU KUHINJE</strong>
+            </div>
+            <div class="nav">
+                <ul>
+                    <li><a href="javascript:void(0)">Domaća <span>&#9656;</span></a></li>
+                    <li><a href="javascript:void(0)">Kineska <span>&#9656;</span></a></li>
+                    <li><a href="javascript:void(0)">Meksička <span>&#9656;</span></a></li>
+                    <li><a href="javascript:void(0)">Indijska <span>&#9656;</span></a></li>
+                    <li><a href="javascript:void(0)">Italijanska <span>&#9656;</span></a></li>
+                </ul>
+            </div>
+            <div class="caption">
+                <strong>TOP 5 RESTORANA</strong>
+            </div>
+            <div class="top-five">
+                <div>
+                    <a href="google.com">
+                        <div class="across">
+                            <p>LOREM IPSUM</p>
+                            <span class="border-bottom-white"></span>
+                            <span>pogledaj vise</span>
+                        </div>
+                        <img src="http://cdn.ebaumsworld.com/mediaFiles/picture/366483/82538693.jpg" alt="food">
+                    </a>
+                </div>
+                <div>
+                    <a href="google.com">
+                        <div class="across">
+                            <p>LOREM IPSUM</p>
+                            <span class="border-bottom-white"></span>
+                            <span>pogledaj vise</span>
+                        </div>
+                        <img src="http://cdn.ebaumsworld.com/mediaFiles/picture/366483/82538693.jpg" alt="food">
+                    </a>
+                </div>
+                <div>
+                    <a href="google.com">
+                        <div class="across">
+                            <p>LOREM IPSUM</p>
+                            <span class="border-bottom-white"></span>
+                            <span>pogledaj vise</span>
+                        </div>
+                        <img src="http://cdn.ebaumsworld.com/mediaFiles/picture/366483/82538693.jpg" alt="food">
+                    </a>
+                </div>
+                <div>
+                    <a href="google.com">
+                        <div class="across">
+                            <p>LOREM IPSUM</p>
+                            <span class="border-bottom-white"></span>
+                            <span>pogledaj vise</span>
+                        </div>
+                        <img src="http://cdn.ebaumsworld.com/mediaFiles/picture/366483/82538693.jpg" alt="food">
+                    </a>
+                </div>
+                <div>
+                    <a href="google.com">
+                        <div class="across">
+                            <p>LOREM IPSUM</p>
+                            <span class="border-bottom-white"></span>
+                            <span>pogledaj vise</span>
+                        </div>
+                        <img src="http://cdn.ebaumsworld.com/mediaFiles/picture/366483/82538693.jpg" alt="food">
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div ng-view></div>
+    </div>
+    <script src="assets/bower_components/angular/angular.min.js"></script>
+    <script src="assets/bower_components/angular-route/angular-route.min.js"></script>
+    <!-- app > main application file -->
+    <script src="app/app.min.js"></script>
+    <!-- app > controllers -->
+    <script src="app/controllers/app.controller.min.js"></script>
+    <!-- app > services -->
+    <script src="app/services/app.service.min.js"></script>
+    <!-- app > config(routes) -->
+    <script src="app/config/app.routes.min.js"></script>
+    <!-- app > directives -->
+    <script src="app/directives/app.directive.min.js"></script>
+</body>
+</html>

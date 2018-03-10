@@ -1,0 +1,126 @@
+#sidebar {
+    width: 214px;
+    position: fixed;
+    left: 0;
+    bottom: 0px;
+    height: calc(100% - 61px);
+    overflow: auto;
+    background-color: $green;
+    @media screen and (max-width: 768px) {
+        opacity: 0;
+        top: 0;
+        height: 100%;
+        z-index: 9999;
+    }
+
+    & .caption {
+        @extend .padding-ten;
+        background: $dark-green;
+        text-align: center;
+        color: $white;
+        font-size: 16px;
+        letter-spacing: 2px;
+    }
+    & .nav {
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 0 0 50px 10px;
+            li {
+                a,
+                a:link,
+                a:visited {
+                    display: block;
+                    font-size: 12pt;
+                    padding: 10px 10px 10px 30px;
+                    border-bottom: 1px solid $white;
+                    text-decoration: none;
+                    color: $light-green;
+                    @include transition(all 0.3s ease);
+                    span {
+                        float: right;
+                        font-size: 20px;
+                        color: $white;
+                        @include transition(all 0.3s ease);
+                    }
+                }
+                a:hover {
+                    color: $white;
+                    span {
+                        transform: rotate(90deg);
+                    }
+                }
+            }
+        }
+    }
+}
+
+.top-five {
+    @extend .padding-ten;
+    div {
+        position: relative;
+        overflow: hidden;
+        width: 156px;
+        padding: 0;
+        margin: 6px auto;
+        height: 69.55px;
+        &:first-child {
+            margin-top: 20px;
+        }
+        img {
+            cursor: pointer;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        a {
+            text-decoration: none;
+            padding: 0;
+            p {
+                color: white;
+                font-size: 16px;
+            }
+
+        }
+        & .across {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0px;
+            left: 0px;
+            margin: 0;
+            color: $white;
+            padding: 47px 0 0 5px;
+            @include transition(all 0.3s ease);
+            p {
+                padding: 0;
+                margin: 0;
+                font-weight: 300;
+            }
+            span {
+                color: $dark-green;
+                font-size: 12px;
+                font-weight: bold;
+            }
+            & .border-bottom-white {
+                display: block;
+                margin: 1px;
+                width: 0px;
+                height: 2px;
+                background: $white;
+                @include transition(all 0.3s ease);
+
+            }
+
+        }
+
+        &:hover .across {
+            padding: 17px 0 0 5px;
+            background: rgba(0, 0, 0, 0.5);
+            & .border-bottom-white {
+                width: 23px;
+                @include transition-delay(0.3s);
+            }
+        }
+    }
+}
