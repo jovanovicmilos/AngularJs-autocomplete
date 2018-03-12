@@ -1,6 +1,6 @@
 var gulp = require('gulp'),
     uglify = require('gulp-uglify'),
-    compass = require('gulp-compass'),
+//    compass = require('gulp-compass'),
     connect = require('gulp-connect'),
     rename = require('gulp-rename');
 
@@ -19,25 +19,25 @@ gulp.task('scripts', function(){
 //SCSS
 //////////////////////////
 
-gulp.task('compass', function(){
-    gulp.src('assets/scss/style.scss')
-    .pipe(compass({
-          config_file: './config.rb',
-          css: 'assets/css',
-          sass: 'assets/scss',
-          require: ['sass']
-      }))
-    .pipe(gulp.dest('assets/css/'));
-});
+//gulp.task('compass', function(){
+//    gulp.src('assets/scss/style.scss')
+//    .pipe(compass({
+//          config_file: './config.rb',
+//          css: 'assets/css',
+//          sass: 'assets/scss',
+//          require: ['sass']
+//      }))
+//    .pipe(gulp.dest('assets/css/'));
+//});
 
 //////////////////////////
 //WATCH
 //////////////////////////
 
-gulp.task('watch', function(){
-    gulp.watch('app/**/*.js', ['scripts']);
-    gulp.watch('assets/scss/**/*.scss', ['compass']);
-});
+//gulp.task('watch', function(){
+//    gulp.watch('app/**/*.js', ['scripts']);
+//    gulp.watch('assets/scss/**/*.scss', ['compass']);
+//});
 
 //////////////////////////
 //CONNECT
@@ -55,4 +55,5 @@ gulp.task('connect', function() {
 //DEFAULT TASKS
 //////////////////////////
 
-gulp.task('default', ['scripts', 'compass', 'watch', 'connect']);
+//gulp.task('default', ['scripts', 'compass', 'watch', 'connect']);
+gulp.task('default', ['scripts', 'connect']);
