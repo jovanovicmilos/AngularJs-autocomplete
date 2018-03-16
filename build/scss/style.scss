@@ -1,0 +1,167 @@
+$dark-green: #4C8B30;
+$green: #76BC59;
+$light-green: #E7EFE4;
+$white: #FFFFFF;
+$gray: #EBEBEB;
+$dark-gray: #666666;
+$black: #000000;
+
+@import 'mixin';
+@import 'navigation';
+@import 'sidebar';
+@import 'autocomplete';
+
+
+@font-face {
+    font-family: "Myriad Pro";
+    src: url("../../assets/fonts/Myriad%20Pro%20Regular.ttf") format("truetype");
+}
+
+[ng\:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak {
+    display: none !important;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    background: $light-green;
+    font-family: "Myriad Pro";
+}
+
+#content {
+    overflow: hidden;
+    height: 100%;
+    min-height: 800px;
+    padding: 0px;
+    margin: 0;
+    @media screen and (max-width: 990px) {
+        padding: 10px;
+    }
+}
+
+.padding-ten {
+    padding: 10px;
+}
+
+#main {
+    margin-left: 214px;
+    padding: 20px;
+    min-height: 800px;
+    clear: both;
+    @media screen and (max-width: 991px) {
+        padding: 10px;
+    }
+    @media screen and (max-width: 768px) {
+        margin-left: 0px;
+        padding: 0;
+    }
+    & .search-area {
+        padding: 15px;
+        margin: 0 10px 0 0;
+        float: left;
+        width: 100%;
+        max-width: 400px;
+        height: 140px;
+        background-color: #FFFFFF;
+        @media screen and (min-width: 1024px) and (max-width:1240px) {
+            width: 45%;
+        }
+        @media screen and (min-width: 991px) and (max-width:1024px) {
+            width: 45%;
+        }
+        @media screen and (max-width:990px) {
+            display: block;
+            max-width: 100%;
+            padding: 10px;
+            @include box-sizing(border-box);
+            margin-bottom: 10px;
+            height: 170px;
+        }
+        form {
+            padding: 0 5px 0 0;
+            & .form-group {
+                display: block;
+                input {
+                    display: block;
+                    width: 99%;
+                    padding: 13px 0px 13px 4px;
+
+                }
+            }
+        }
+    }
+    & .restaurant-single {
+        background-color: $white;
+        float: left;
+        margin: 0px;
+        padding: 10px;
+        width: 90%;
+        max-width: 400px;
+        @media screen and (min-width: 1024px) and (max-width:1240px) {
+            width: 45%;
+        }
+        @media screen and (min-width: 991px) and (max-width:1024px) {
+            width: 45%;
+        }
+        @media screen and (max-width:990px) {
+            max-width: 100%;
+            @include box-sizing(border-box);
+            padding: 10px;
+            width: 100%;
+        }
+        img {
+            width: 100%;
+            height: 170px;
+            object-fit: cover;
+        }
+        & .restaurant-info {
+            width: 100%;
+            padding: 0;
+            font-weight: bold;
+            color: $dark-gray;
+            & .rating {
+                background: $green;
+                width: auto;
+                display: inline-block;
+                margin: 0;
+                padding: 0 9px 8px 9px;
+                color: $white;
+                p {
+                    display: inline;
+                    font-size: 14px;
+                    color: $white;
+                }
+                h2 {
+                    display: inline;
+                    position: relative;
+                    top: 4px;
+                    font-weight: bold;
+                }
+            }
+            & .reviews {
+                color: $dark-gray;
+                font-weight: 400;
+                font-size: 13px;
+                padding-left: 10px;
+            }
+            p {
+                font-size: 15px;
+                font-weight: 400;
+                color: $dark-gray;
+            }
+        }
+    }
+    p {
+        font-size: 13px;
+    }
+}
+
+.show-sidebar {
+    opacity: 1!important;
+}
+
+.show-filters {
+    display: block!important;
+}
