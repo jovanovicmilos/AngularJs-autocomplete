@@ -34,5 +34,5 @@ pokretanje projekta u lokalu (navede su gore ispod naslova "Specifikacija tehnol
 5. nako toga mozete se vratiti na root projekta i pokrenuti projekat
 iz komandne linije komandom "gulp".
 ```
-- Default-ni port projekta je 8080, mozete po zelji promeniti u gulpfile.js (linija: 50)
-- localhost:8080
+- Default-ni port projekta je 3000, mozete po zelji promeniti u gulpfile.js (linija: 50)
+- localhost:3000
