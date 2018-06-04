@@ -1,6 +1,6 @@
 # Dobrodošli!
 
-## SPECIFIKACIJA TEHNOLOGIJA
+## SPECIFIKACIJA TEHNOLOGIJAA
 
 - $ node
 	> --version v6.11.4
